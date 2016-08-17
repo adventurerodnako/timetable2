@@ -1,4 +1,6 @@
 <template name="layout">
-    <!-- {{> header}} -->
-    {{> Template.dynamic template=content}}
+    <div class="wrapper">
+        {{> nav}}
+        {{> Template.dynamic template=content}}
+    </div>
 </template>

@@ -1,0 +1,36 @@
+nav {
+    height: 70px;
+    width: 100%;
+    color: white;
+    background-color: #311b36;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    position: absolute;
+    top: 25px;
+    left: 220px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 10px;
+    font-size: 12pt;
+}
+
+nav .logo {
+    position: absolute;
+    font-size: 30pt;
+    top: 6px;
+    left: 15px;
+}
+
+nav .login {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 12pt;
+}

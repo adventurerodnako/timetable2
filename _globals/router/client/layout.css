@@ -1,0 +1,10 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:100|Roboto|Roboto+Condensed';
+
+body {
+    background-color: grey;
+}
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+}
