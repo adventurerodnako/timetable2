@@ -6,6 +6,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 .wrapper {
     margin-top: 50px;
 }
