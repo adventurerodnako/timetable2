@@ -170,7 +170,8 @@
 		float: left;
 	}
 	.event-list > li > .info {
-		background-color: rgb(245, 245, 245);
+		/*background-color: rgb(245, 245, 245);*/
+        background-color: #fff;
 		overflow: hidden;
 	}
 	.event-list > li > time,

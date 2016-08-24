@@ -1,0 +1,156 @@
+.loginbox {
+    background-color: #fff;
+    padding: 0 0 20px 0;
+    -webkit-box-shadow: 0 0 14px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 14px rgba(0,0,0,.1);
+    box-shadow: 0 0 14px rgba(0,0,0,.1);
+    margin: 10% auto;
+}
+
+.loginbox .loginbox-title {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #444;
+}
+
+.loginbox .loginbox-social .social-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a9a9a9;
+    margin-top: 10px;
+}
+
+.loginbox .loginbox-social .social-buttons {
+    text-align: center;
+    margin-top: 20px;
+    height: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.loginbox .loginbox-social .social-buttons .button-facebook {
+    display: block;
+    border: 2px solid #3b5998;
+    color: #3b5998;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons .button-twitter {
+    display: block;
+    border: 2px solid #29c1f6;
+    color: #29c1f6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons .button-google {
+    display: block;
+    border: 2px solid #ef4f1d;
+    color: #ef4f1d;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons .button-facebook i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.loginbox .loginbox-social .social-buttons .button-twitter i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.loginbox .loginbox-social .social-buttons .button-google i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.loginbox .loginbox-or {
+    position: relative;
+    text-align: center;
+    height: 20px;
+}
+
+.loginbox .loginbox-or .or-line {
+    position: absolute;
+    height: 1px;
+    top: 10px;
+    left: 40px;
+    right: 40px;
+    background-color: #ccc;
+}
+
+.loginbox .loginbox-or .or {
+    position: absolute;
+    top: 0;
+    -lh-property: 0;
+    left: -webkit-calc(50% - 25px);
+    left: -moz-calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    color: #999;
+    margin: 0 auto;
+}
+
+.loginbox .loginbox-textbox {
+    padding: 10px 40px;
+}
+
+.loginbox .loginbox-textbox .form-control {
+    -webkit-border-radius: 3px !important;
+    -webkit-background-clip: padding-box !important;
+    -moz-border-radius: 3px !important;
+    -moz-background-clip: padding !important;
+    border-radius: 3px !important;
+    background-clip: padding-box !important;
+}
+
+.loginbox .loginbox-forgot {
+    padding-left: 40px;
+}
+
+.loginbox .loginbox-forgot a {
+    font-size: 11px;
+    color: #666;
+}
+
+.loginbox .loginbox-submit {
+    padding: 10px 40px;
+}
+
+.loginbox .loginbox-signup {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.loginbox .loginbox-signup a {
+    font-size: 13px;
+    color: #666;
+}
+
+.logobox {
+    height: 50px !important;
+    padding: 5px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0 0 14px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 0 14px rgba(0,0,0,.1);
+    box-shadow: 0 0 14px rgba(0,0,0,.1);
+    background-color: #fff;
+    text-align: left;
+}
