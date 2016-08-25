@@ -1,6 +1,6 @@
 FlowRouter.route('/sign-up', {
-    name: 'sign-up',
+    name: 'signup',
     action: function() {
-        BlazeLayout.render('layout', {content: 'sign-up'});
+        BlazeLayout.render('layout', {content: 'signup'});
     }
 });

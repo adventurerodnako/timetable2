@@ -121,6 +121,22 @@
     background-clip: padding-box !important;
 }
 
+.loginbox .loginbox-textbox .form-group {
+    margin-bottom: 0px;
+}
+
+.loginbox .loginbox-textbox .form-group input[type=email] {
+    border-radius: 0px !important;
+}
+
+.loginbox .loginbox-textbox .form-group input[type=password] {
+    border-radius: 0px !important;
+}
+
+.loginbox input[type=submit] {
+    border-radius: 0px !important;
+}
+
 .loginbox .loginbox-forgot {
     padding-left: 40px;
 }
@@ -139,9 +155,14 @@
     padding-top: 10px;
 }
 
-.loginbox .loginbox-signup a {
+.loginbox .loginbox-signup span {
     font-size: 13px;
     color: #666;
+}
+
+.loginbox .loginbox-signup a {
+    font-size: 13px;
+    color: #2783CD;
 }
 
 .logobox {
@@ -153,4 +174,11 @@
     box-shadow: 0 0 14px rgba(0,0,0,.1);
     background-color: #fff;
     text-align: left;
+}
+
+.error {
+    margin-top: 10px;
+    font-weight: 300;
+    color: #a94442;
+    font-size: 13px;
 }

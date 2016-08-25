@@ -1,7 +1,7 @@
 #custom-search-input{
     padding: 3px;
     border: solid 1px #E4E4E4;
-    border-radius: 6px;
+    /*border-radius: 6px;*/
     background-color: #fff;
     margin-bottom: 20px;
 }
@@ -28,7 +28,7 @@
 }
 
 #custom-search-input .glyphicon-search{
-    font-size: 23px;
+    font-size: 18px;
 }
 
 .event-list {
