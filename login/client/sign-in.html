@@ -1,0 +1,50 @@
+<template name="signin">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-md-offset-4">
+            <!-- loginbox -->
+            <div class="loginbox">
+
+                <!-- loginbox-title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="loginbox-title">Вход</div>
+                    </div>
+                </div> <!-- end loginbox-title -->
+
+                <!-- textbox -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form id="signinForm">
+                            <div class="loginbox-textbox">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="loginbox-textbox">
+                                <div class="form-group">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Пароль">
+                                </div>
+                            </div>
+                            <!-- <div class="loginbox-forgot">
+                                <a href="">Забыли пароль?</a>
+                            </div> -->
+                            <div class="loginbox-submit">
+                                <input type="submit" id="signupButton" class="btn btn-primary btn-block" value="Войти">
+                            </div>
+                            <div class="loginbox-signup">
+                                <span>Нет аккаунта? </span>
+                                <a href="{{pathFor 'signup'}}">Регистрация</a>
+
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- end textbox -->
+             </div> <!-- end loginbox -->
+
+            <!-- logobox -->
+            <!-- <div class="logobox"></div> -->
+
+        </div>
+    </div>
+
+</template>
