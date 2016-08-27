@@ -152,7 +152,7 @@
 
 .loginbox .loginbox-signup {
     text-align: center;
-    padding-top: 10px;
+    padding: 10px 40px;
 }
 
 .loginbox .loginbox-signup span {
@@ -160,6 +160,7 @@
     color: #666;
 }
 
+.loginbox .loginbox-forgot a,
 .loginbox .loginbox-signup a {
     font-size: 13px;
     color: #2783CD;

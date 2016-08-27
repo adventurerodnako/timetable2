@@ -1,3 +1,19 @@
+// fogotPassword
+FlowRouter.route('/fogotPassword', {
+    name: 'fogotPassword',
+    action: function() {
+        BlazeLayout.render('layout', {content: 'fogotPassword'});
+    }
+});
+
+// resendVerificationEmail
+FlowRouter.route('/resendVerificationEmail', {
+    name: 'resendVerificationEmail',
+    action: function() {
+        BlazeLayout.render('layout', {content: 'resendVerificationEmail'});
+    }
+});
+
 // sign-in
 FlowRouter.route('/sign-in', {
     name: 'signin',

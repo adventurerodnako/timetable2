@@ -12,7 +12,8 @@ Template.signin.events({
                 console.log("error", error);
                 if(error.reason === "User not found"){
                     Bert.alert('Пользователь не найден!', 'danger', 'growl-top-right');
-                } else if(error.reason === "Incorrect password"){
+                }
+                if(error.reason === "Incorrect password"){
                     Bert.alert('Вы ввели неверный пароль!', 'danger', 'growl-top-right');
                 }
             } else {

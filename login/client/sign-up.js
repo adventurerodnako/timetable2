@@ -1,4 +1,10 @@
 Template.signup.events({
+    "click .resendVerificationEmail": function(event, template){
+         FlowRouter.go('resendVerificationEmail');
+    }
+});
+
+Template.signup.events({
     'submit form': function(event,template) {
         event.preventDefault();
 
