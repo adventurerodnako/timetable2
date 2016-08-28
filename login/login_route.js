@@ -1,8 +1,16 @@
+// resetPassword
+FlowRouter.route('/reset-password/:token', {
+    name: 'resetPWD',
+    action: function() {
+        BlazeLayout.render('layout', {content: 'resetPWD'});
+    }
+});
+
 // fogotPassword
 FlowRouter.route('/fogotPassword', {
-    name: 'fogotPassword',
+    name: 'fogotPWD',
     action: function() {
-        BlazeLayout.render('layout', {content: 'fogotPassword'});
+        BlazeLayout.render('layout', {content: 'fogotPWD'});
     }
 });
 

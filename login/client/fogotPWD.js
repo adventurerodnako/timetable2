@@ -1,4 +1,4 @@
-Template.fogotPassword.events({
+Template.fogotPWD.events({
     "submit form": function(event, template){
         event.preventDefault();
 
@@ -24,8 +24,8 @@ Template.fogotPassword.events({
     }
 });
 
-Template.fogotPassword.onRendered(function(){
-    $("#fogotPasswordForm").validate({
+Template.fogotPWD.onRendered(function(){
+    $("#fogotPWDForm").validate({
         rules: {
             email:{
                 email: true,

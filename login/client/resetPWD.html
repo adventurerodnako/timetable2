@@ -1,4 +1,4 @@
-<template name="fogotPassword">
+<template name="resetPWD">
     <div class="row">
         <div class="col-sm-12 col-md-4 col-md-offset-4">
             <!-- loginbox -->
@@ -7,23 +7,26 @@
                 <!-- loginbox-title -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="loginbox-title">
-                            Сбросить пароль
-                        </div>
+                        <div class="loginbox-title">Новый пароль</div>
                     </div>
                 </div> <!-- end loginbox-title -->
 
                 <!-- textbox -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <form id="fogotPasswordForm">
+                        <form id="resetPWDForm">
                             <div class="loginbox-textbox">
                                 <div class="form-group">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Пароль (6+ символов)">
+                                </div>
+                            </div>
+                            <div class="loginbox-textbox">
+                                <div class="form-group">
+                                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="Пароль (6+ символов) (еще раз)">
                                 </div>
                             </div>
                             <div class="loginbox-submit">
-                                <input type="submit" id="fogotPasswordButton" class="btn btn-primary btn-block" value="Письмо со сбросом пароля">
+                                <input type="submit" id="resetPWDButton" class="btn btn-primary btn-block" value="Установить">
                             </div>
                         </form>
                     </div>

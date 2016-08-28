@@ -18,7 +18,7 @@ Template.signin.events({
                 }
             } else {
                 console.log('User sign in');
-                FlowRouter.go('/');
+                FlowRouter.go('general');
             }
         });
     }
