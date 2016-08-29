@@ -24,6 +24,23 @@ Template.signin.events({
     }
 });
 
+Template.signin.events({
+    'click #facebook-login': function(event) {
+        Meteor.loginWithFacebook({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Facebook login failed");
+            }
+        });
+    },
+    'click #twitter-login': function(event) {
+        Meteor.loginWithTwitter({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Twitter login failed");
+            }
+        });
+    }
+});
+
 Template.signin.onRendered(function(){
     $("#signinForm").validate({
         rules: {
