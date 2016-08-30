@@ -34,6 +34,6 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'github',
-    clientId: '544476190860-t5fc5k75g4o5jfmpim78pbtjdvsvihau.apps.googleusercontent.com',
-    secret: 'N0ULff1tsJ074eLvtHhebmMI'
+    clientId: '99d8444a2d90e6b27c49',
+    secret: '99d9cc196ff40379c12d2b7864d93cf9b633054a'
 });

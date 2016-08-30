@@ -45,6 +45,13 @@ Template.signin.events({
                 throw new Meteor.Error("Google login failed");
             }
         });
+    },
+    'click #github-login': function(event) {
+        Meteor.loginWithGithub({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Github login failed");
+            }
+        });
     }
 });
 

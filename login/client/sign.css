@@ -31,6 +31,14 @@
     margin-right: 15px;
 }
 
+.loginbox .loginbox-social .social-buttons2 {
+    text-align: center;
+    margin-top: 0px;
+    height: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .loginbox .loginbox-social .social-buttons .button-facebook {
     display: block;
     border: 2px solid #3b5998;
@@ -78,6 +86,63 @@
     font-size: 26px;
     line-height: 50px;
 }
+
+.loginbox .loginbox-social .social-buttons2 {
+    text-align: center;
+    margin-top: 0px;
+    height: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-github {
+    display: block;
+    border: 2px solid black;
+    color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-twitter {
+    display: block;
+    border: 2px solid #29c1f6;
+    color: #29c1f6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-google {
+    display: block;
+    border: 2px solid #ef4f1d;
+    color: #ef4f1d;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-github i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-twitter i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.loginbox .loginbox-social .social-buttons2 .button-google i {
+    font-size: 26px;
+    line-height: 50px;
+}
+
 
 .loginbox .loginbox-or {
     position: relative;
