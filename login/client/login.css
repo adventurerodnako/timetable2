@@ -106,10 +106,10 @@
     background-color: #fff;
 }
 
-.loginbox .loginbox-social .social-buttons2 .button-twitter {
+.loginbox .loginbox-social .social-buttons2 .button-vk {
     display: block;
-    border: 2px solid #29c1f6;
-    color: #29c1f6;
+    border: 2px solid #2783CD;
+    color: #2783CD;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -117,10 +117,10 @@
     background-color: #fff;
 }
 
-.loginbox .loginbox-social .social-buttons2 .button-google {
+.loginbox .loginbox-social .social-buttons2 .button-odnoklassniki {
     display: block;
-    border: 2px solid #ef4f1d;
-    color: #ef4f1d;
+    border: 2px solid orange;
+    color: orange;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -133,12 +133,12 @@
     line-height: 50px;
 }
 
-.loginbox .loginbox-social .social-buttons2 .button-twitter i {
+.loginbox .loginbox-social .social-buttons2 .button-vk i {
     font-size: 26px;
     line-height: 50px;
 }
 
-.loginbox .loginbox-social .social-buttons2 .button-google i {
+.loginbox .loginbox-social .social-buttons2 .button-odnoklassniki i {
     font-size: 26px;
     line-height: 50px;
 }

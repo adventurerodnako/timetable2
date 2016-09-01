@@ -37,3 +37,25 @@ ServiceConfiguration.configurations.insert({
     clientId: '99d8444a2d90e6b27c49',
     secret: '99d9cc196ff40379c12d2b7864d93cf9b633054a'
 });
+
+ServiceConfiguration.configurations.remove({
+    service: 'vk'
+});
+
+ServiceConfiguration.configurations.insert({
+    service: 'vk',
+    appId:   '5612596',      // Your app id
+    secret:  '7aho4PrVuFJy3VCNcLxX' // Your app secret
+});
+
+ServiceConfiguration.configurations.remove({
+    service: 'ok'
+});
+
+ServiceConfiguration.configurations.insert({
+    service: 'ok',
+    appId:   '1248075264',       // Your app id
+    secret:  '3EA123C6EDBF182488D174CD', // Your app secret
+    public:  'CBAPBFGLEBABABABA', // Your app public code
+    scope:   'http://www.odnoklassniki.ru/game/1248075264'         // Scopes split by ";"
+});

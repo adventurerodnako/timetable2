@@ -52,6 +52,20 @@ Template.signin.events({
                 throw new Meteor.Error("Github login failed");
             }
         });
+    },
+    'click #vk-login': function(event) {
+        Meteor.loginWithVk({}, function(err){
+            if (err) {
+                throw new Meteor.Error("VK login failed");
+            }
+        });
+    },
+    'click #odnoklassniki-login': function(event) {
+        Meteor.loginWithOk({}, function(err){
+            if (err) {
+                throw new Meteor.Error("Ok login failed");
+            }
+        });
     }
 });
 
