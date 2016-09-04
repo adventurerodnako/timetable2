@@ -1,0 +1,8 @@
+<template name="profile">
+	<div class="row">
+        <div class="profile col-md-6 col-md-offset-3">
+                <h3>Профиль пользователя</h3>
+                {{> quickForm resetOnSuccess=false collection="Meteor.users" id="profile" doc=currentUser type="update" buttonContent="Сохранить" omitFields="services,createdAt,roles"}}
+        </div>
+    </div>
+</template>
