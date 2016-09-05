@@ -42,5 +42,7 @@ alanning:roles
 aldeed:collection2
 ongoworks:security
 meteorhacks:fast-render
-settinghead:auto-nprogress
 rzymek:moment-locale-ru
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker
+momentjs:moment

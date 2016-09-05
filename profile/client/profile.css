@@ -1,8 +1,38 @@
+.profile-title {
+    color: grey;
+}
+
 .profile {
     background-color: #fff;
     /*padding: 0 0 0 0;*/
-    -webkit-box-shadow: 0 0 14px rgba(0,0,0,.1);
-    -moz-box-shadow: 0 0 14px rgba(0,0,0,.1);
-    box-shadow: 0 0 14px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, .1);
     margin-top: 2%;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.profile a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    color: grey;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    background-color: #B1B2B2;
+}
+
+.profile span {
+    padding-left: 30px;
+    font-size: 130%;
+    color: black;
+}
+
+.profile .detail {
+    padding-left: 35px;
 }

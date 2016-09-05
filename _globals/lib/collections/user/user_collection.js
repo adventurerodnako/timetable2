@@ -42,7 +42,14 @@ Schemas.UserProfile = new SimpleSchema({
         optional: true,
         autoform: {
             label: false,
-            placeholder: "Дата рождения"
+            placeholder: "Дата рождения",
+            type: "bootstrap-datepicker",
+            "data-date-autoclose": "true",
+            datePickerOptions: {
+                format: "dd-mm-yyyy",
+                startView: "day",
+                minViewMode: "year"
+            }
         }
     },
     gender: {
@@ -112,14 +119,13 @@ Schemas.User = new SimpleSchema({
         autoform: {
             label: false,
             placeholder: "email"
-        },
-        optional: true
+        }
     },
     "emails.$.address": {
         type: String,
         autoform: {
             label: false,
-            placeholder: "email"
+            placeholder: "email*"
         },
         regEx: SimpleSchema.RegEx.Email
     },
@@ -129,7 +135,8 @@ Schemas.User = new SimpleSchema({
         autoform: {
             label: false,
             type: "hidden"
-        }
+        },
+        optional: true
     },
     createdAt: {
         type: Date,
