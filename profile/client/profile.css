@@ -1,20 +1,23 @@
-.profile-title {
+.title-box {
     color: grey;
 }
 
-.profile {
+.white-box {
     background-color: #fff;
     /*padding: 0 0 0 0;*/
     -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, .1);
     -moz-box-shadow: 0 0 14px rgba(0, 0, 0, .1);
     box-shadow: 0 0 14px rgba(0, 0, 0, .1);
     margin-top: 2%;
+}
+
+.rows-box {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
 }
 
-.profile a {
+.rows-box a {
     display: block;
     height: 60px;
     line-height: 60px;
@@ -23,16 +26,16 @@
     text-decoration: none;
 }
 
-.profile a:hover {
-    background-color: #B1B2B2;
+.rows-box a:hover {
+    background-color: #d2d2d4;
 }
 
-.profile span {
+.rows-box span {
     padding-left: 30px;
     font-size: 130%;
     color: black;
 }
 
-.profile .detail {
+.rows-box .detail {
     padding-left: 35px;
 }
