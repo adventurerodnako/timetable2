@@ -1,0 +1,145 @@
+.white-box .sub-title-box {
+    color: grey;
+    display: block;
+    padding-left: 35px;
+    padding-top: 20px;
+}
+
+.white-box .rows-box .email {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 70px;
+    -webkit-transition: .1s ease-out;
+    -webkit-transition-delay: 0.2s;
+    -o-transition: .1s ease-out;
+    -o-transition-delay: 0.2s;
+    -moz-transition: .1s ease-out;
+    -moz-transition-delay: 0.2s;
+    transition: .1s ease-out;
+    transition-delay: 0.2s;
+}
+
+.white-box .rows-box .email:hover {
+    background-color: #d2d2d4;
+}
+
+.white-box .rows-box .email .check {
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: grey;
+    font-size: 26px;
+    line-height: 50px;
+    padding-left: 12px;
+    top: 10px;
+    left: 15px;
+}
+
+.white-box .rows-box .email .check-green {
+    background-color: rgb(118, 193, 48);
+}
+
+.white-box .rows-box .email .email-text {
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 12px;
+    font-size: 120%;
+}
+
+.white-box .rows-box .email .email-verified {
+    color: grey;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-weight: 300;
+    font-size: 120%;
+}
+
+.white-box .rows-box .email .email-links {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 10px;
+    color: black;
+    -webkit-transition:3s ease-out;
+    -webkit-transition-delay: 3s;
+    -o-transition:3s ease-out;
+    -o-transition-delay: 3s;
+    -moz-transition:3s ease-out;
+    -moz-transition-delay: 3s;
+    transition:3s ease-out;
+    transition-delay: 3s;
+}
+
+.white-box .rows-box .email .email-links:hover {
+    background-color: #d2d2d4;
+}
+
+.white-box .rows-box .email ul {
+    position: absolute;
+    right: 3%;
+    top: 18px;
+    left: 45%;
+    width: auto;
+    line-height: 20px;
+}
+
+.white-box .rows-box .email ul li a {
+    height: 30px;
+}
+
+.white-box input[type=submit] {
+    border-radius: 0px !important;
+    width: 250px;
+    margin-left: 20px;
+    /*margin-top: 15px;*/
+    display: block;
+    /*margin-bottom: 10px;*/
+    font-size: 120%;
+    background-color: #e6e6e6;
+}
+
+.white-box input[type=submit]:hover {
+    background-color: #d2d2d4;
+}
+
+@media(max-width:767px) {
+    .white-box .rows-box .email ul {
+        left: 0%;
+        right: 5%;
+        font-size: 90%;
+    }
+}
+
+@media(max-width:767px) and (orientation:landscape) {
+    .white-box .rows-box .email ul {
+        left: 48%;
+        right: 3%;
+        font-size: 90%;
+    }
+}
+
+@media(min-width:768px) {
+    .white-box .rows-box .email ul {
+        left: 53%;
+    }
+}
+
+@media(min-width:992px) {
+    .white-box .rows-box .email ul {
+        left: 45%;
+    }
+}
+
+@media(min-width:1200px) {
+    .white-box .rows-box .email ul {
+        left: 55%;
+    }
+}

@@ -1,0 +1,96 @@
+<template name="email">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h4 class="title-box">Email</h4>
+            <div class="white-box">
+                {{#if userEmailPrimary}}
+                    <h5 class="sub-title-box">Основной почтовый адрес</h5>
+                    <ul class="rows-box">
+                        {{#each userEmailPrimary}}
+                            <li>
+                                <div class="email">
+                                    <i class="fa fa-check fa-2x fa-inverse check {{#if verified}}check-green{{/if}}"></i>
+                                    <span class="email-text">{{address}}</span>
+                                    {{#if verified}}
+                                        <span class="email-verified">подтвержден</span>
+                                    {{else}}
+                                        <span class="email-verified">не подтвержден</span>
+                                        <a href="#" class="dropdown-toggle email-links" data-toggle="dropdown">
+                                            <i class="fa fa-ellipsis-v fa-2x"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="" class="resendVerifiedEmail">Отправить письмо с подтверждением</a></li>
+                                        </ul>
+                                    {{/if}}
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+                {{#if userEmailsSecondary}}
+                    <h5 class="sub-title-box">Дополнительные почтовые адреса</h5>
+                    <ul class="rows-box">
+                        {{#each userEmailsSecondary}}
+                            <li>
+                                <div class="email">
+                                    <i class="fa fa-check fa-2x fa-inverse check {{#if verified}}check-green{{/if}}"></i>
+                                    <span class="email-text">{{address}}</span>
+                                    {{#if verified}}
+                                        <span class="email-verified">подтвержден</span>
+                                    {{else}}
+                                        <span class="email-verified">не подтвержден</span>
+                                    {{/if}}
+                                    <a href="#" class="dropdown-toggle email-links" data-toggle="dropdown">
+                                        <i class="fa fa-ellipsis-v fa-2x"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        {{#if verified}}
+                                            <li><a href="" class="makePrimaryEmail">Сделать основным почтовым адресом</a></li>
+                                            <li><a href="" class="delEmail">Удалить</a></li>
+                                        {{else}}
+                                            <li><a href="" class="resendVerifiedEmail">Отправить письмо с подтверждением</a></li>
+                                            <li><a href="" class="delEmail">Удалить</a></li>
+                                        {{/if}}
+                                    </ul>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+                <br>
+                <input type="submit" id="addEmailButton" class="btn btn-default btn-block addEmail" value="Добавить почтовый адрес">
+                <!-- {{#afModal class="btn btn-default" fields="emails" collection="Meteor.users" operation="update" doc=currentUser._id}}
+                    Добавить почтовый адрес
+                {{/afModal}}
+                {{> autoformModals}} -->
+                <br>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="addEmail">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Добавить почтовый адрес</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="addEmailForm">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" value="" placeholder="введите email">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="addEmail" type="button" class="btn btn-primary pull-left">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

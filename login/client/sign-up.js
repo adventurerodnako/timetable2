@@ -17,7 +17,7 @@ Template.signup.events({
              if (error) {
                  console.log("error", error);
                  if(error.reason === 'Email already exists.'){
-                     Bert.alert('Почтовый адрес уже существует.', 'danger', 'growl-top-right');
+                     Bert.alert('Почтовый адрес уже существует. Укажите другой.', 'danger', 'growl-top-right');
                  }
              } else {
                 Meteor.call("sendVerificationLink", function(error, result){
