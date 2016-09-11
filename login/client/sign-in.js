@@ -11,10 +11,10 @@ Template.signin.events({
             if(error){
                 console.log("error", error);
                 if(error.reason === "User not found"){
-                    Bert.alert('Пользователь не найден!', 'danger', 'growl-top-right');
+                    Bert.alert('Пользователь не найден!', 'danger', 'fixed-bottom');
                 }
                 if(error.reason === "Incorrect password"){
-                    Bert.alert('Вы ввели неверный пароль!', 'danger', 'growl-top-right');
+                    Bert.alert('Вы ввели неверный пароль!', 'danger', 'fixed-bottom');
                 }
             } else {
                 console.log('User sign in');

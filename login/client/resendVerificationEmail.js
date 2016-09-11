@@ -8,17 +8,17 @@ Template.resendVerificationEmail.events({
             if(error){
                 console.log("error", error);
                 if(error.reason === 'Internal server error'){
-                    Bert.alert('Нет связи с почтовым сервером', 'danger', 'growl-top-right');
+                    Bert.alert('Нет связи с почтовым сервером', 'danger', 'fixed-bottom');
                 }
                 if(error.reason === 'User not found'){
-                    Bert.alert('Пользователь не найден', 'danger', 'growl-top-right');
+                    Bert.alert('Пользователь не найден', 'danger', 'fixed-bottom');
                 }
                 if(error.reason === 'Alredy verified'){
-                    Bert.alert('Почтовый адрес уже подтвержден', 'danger', 'growl-top-right');
+                    Bert.alert('Почтовый адрес уже подтвержден', 'danger', 'fixed-bottom');
                 }
             } else {
                 Bert.alert('Новое письмо было вам отправлено. Если письмо не отображается во входящих, то проверьте папку со спамом.',
-                            'success', 'growl-top-right');
+                            'success', 'fixed-bottom');
                 console.log("email resend");
             }
         });

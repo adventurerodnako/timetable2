@@ -9,15 +9,15 @@ Template.resetPWD.events({
              if(error){
                  console.log("error", error);
                  if(error.reason === 'Password may not be empty'){
-                     Bert.alert('Пароль не может быть пустым', 'danger', 'growl-top-right');
+                     Bert.alert('Пароль не может быть пустым', 'danger', 'fixed-bottom');
                  }
                  if(error.reason === 'Token expired'){
-                     Bert.alert('Время действия токена истекло', 'danger', 'growl-top-right');
+                     Bert.alert('Время действия токена истекло', 'danger', 'fixed-bottom');
                  }
              } else {
                  console.log('Ваш пароль был изменен.');
                  FlowRouter.go('general');
-                 Bert.alert('Пароль был успешно изменен.', 'success', 'growl-top-right');
+                 Bert.alert('Пароль был успешно изменен.', 'success', 'fixed-bottom');
              }
         });
     }

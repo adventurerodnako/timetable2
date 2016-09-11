@@ -11,7 +11,6 @@ if (Meteor.isServer) {
             for (var i = 0; i < user.emails.length; i++) {
                 if (user.emails[i].address === email){
                     user.emails[i].address = oldEmail;
-                    console.log(i);
                 }
             }
 
@@ -20,7 +19,6 @@ if (Meteor.isServer) {
             if (!user) {
                 throw new Meteor.Error(403, "User not found");
             } else {
-                console.log(email);
                 var oldEmail = user.emails[0].address;
                 Meteor.users.update(user._id, {
                     $set: {

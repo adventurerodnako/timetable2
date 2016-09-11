@@ -12,10 +12,10 @@ Template.fogotPWD.events({
             if (error) {
                 console.log("error", error);
                 if (error.reason === 'Internal server error') {
-                    Bert.alert('Нет связи с почтовым сервером', 'danger', 'growl-top-right');
+                    Bert.alert('Нет связи с почтовым сервером', 'danger', 'fixed-bottom');
                 }
                 if (error.reason === 'User not found') {
-                    Bert.alert('Пользователь не найден', 'danger', 'growl-top-right');
+                    Bert.alert('Пользователь не найден', 'danger', 'fixed-bottom');
                 }
             } else {
                 console.log("Email reset link sent");

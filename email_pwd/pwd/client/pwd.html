@@ -1,0 +1,25 @@
+<template name="pwd">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h4 class="title-box">Изменить пароль</h4>
+            <div class="white-box">
+                <form class="changePWD">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" name="oldPWD" class="oldPWD form-control" placeholder="Старый пароль">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="newPassword" class="newPassword form-control" placeholder="Новый пароль (6+ символов)">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="confirm_newPassword" class="confirm_newPassword form-control" placeholder="Новый пароль (6+ символов) (еще раз)">
+                        </div>
+                        <input type="submit" class="btn btn-default btn-block changePWDButton" value="Изменить пароль">
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+            <br>
+        </div>
+    </div>
+</template>

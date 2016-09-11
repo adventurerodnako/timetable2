@@ -44,10 +44,10 @@ FlowRouter.route('/verify-email/:token',{
     action: function(params) {
         Accounts.verifyEmail(params.token, function(error){
             if(error){
-                Bert.alert(error.reason, 'danger', 'growl-top-right');
+                Bert.alert(error.reason, 'danger', 'fixed-bottom');
             } else {
                 FlowRouter.go('/');
-                Bert.alert('Почтовый адрес подтвержден! Спасибо!', 'success', 'growl-top-right');
+                Bert.alert('Почтовый адрес подтвержден! Спасибо!', 'success', 'fixed-bottom');
             }
         });
     }

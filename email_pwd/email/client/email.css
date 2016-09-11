@@ -98,16 +98,22 @@
 .white-box input[type=submit] {
     border-radius: 0px !important;
     width: 250px;
-    margin-left: 20px;
-    /*margin-top: 15px;*/
+    margin-left: 40px;
     display: block;
-    /*margin-bottom: 10px;*/
     font-size: 120%;
     background-color: #e6e6e6;
 }
 
 .white-box input[type=submit]:hover {
     background-color: #d2d2d4;
+}
+
+#addEmailForm input[type=email]{
+    border-radius: 0px !important;
+}
+
+#addEmail{
+    border-radius: 0px !important;
 }
 
 @media(max-width:767px) {

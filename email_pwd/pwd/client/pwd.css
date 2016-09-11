@@ -1,0 +1,33 @@
+.changePWD {
+    padding: 20px;
+}
+
+.changePWD input[type=password] {
+    border-radius: 0px;
+}
+
+.changePWD input[type=submit] {
+    border-radius: 0px !important;
+    width: 250px;
+    margin-left: 0px;
+    display: block;
+    font-size: 120%;
+    color: black;
+    background-color: #e6e6e6;
+}
+
+.changePWD input[type=submit]:hover {
+    background-color: #d2d2d4;
+}
+
+@media(max-width:767px) {
+    .changePWD input[type=password] {
+        font-size: 80%;
+    }
+}
+
+@media(max-width:767px) and (orientation:landscape) {
+    .changePWD input[type=password] {
+        font-size: 100%;
+    }
+}

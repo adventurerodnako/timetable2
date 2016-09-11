@@ -17,18 +17,18 @@ Template.signup.events({
              if (error) {
                  console.log("error", error);
                  if(error.reason === 'Email already exists.'){
-                     Bert.alert('Почтовый адрес уже существует. Укажите другой.', 'danger', 'growl-top-right');
+                     Bert.alert('Почтовый адрес уже существует. Укажите другой.', 'danger', 'fixed-bottom');
                  }
              } else {
                 Meteor.call("sendVerificationLink", function(error, result){
                     if(error){
                         console.log("error", error);
                         if(error.reason === 'Internal server error'){
-                            Bert.alert('Нет связи с почтовым сервером', 'danger', 'growl-top-right');
+                            Bert.alert('Нет связи с почтовым сервером', 'danger', 'fixed-bottom');
                         }
                     } else {
                         Bert.alert('Регистрация прошла успешно! Пожалуйста, проверьте свою электронную почту и следуйте инструкциям.',
-                                    'success', 'growl-top-right');
+                                    'success', 'fixed-bottom');
                         console.log("user create");
                     }
                 });
