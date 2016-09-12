@@ -1,23 +1,33 @@
-if(Meteor.isServer){
+if (Meteor.isServer) {
     Meteor.methods({
-        sendVerificationLink: function(){
-             var userId = Meteor.userId();
-             if (userId) {
-                 return Accounts.sendVerificationEmail(userId);
-             }
+        sendVerificationLink: function() {
+            var userId = Meteor.userId();
+            if (userId) {
+                return Accounts.sendVerificationEmail(userId);
+            }
         },
-        resendVerificationLink: function(email) {
-            check(email, String);
-            var user = Meteor.users.findOne({"emails.address": email});
+        resendVerificationLink: function(address) {
+            check(address, String);
+            var user = Meteor.users.findOne({
+                "emails.address": address
+            });
 
-            if(!user){
+            if (!user) {
                 throw new Meteor.Error(403, "User not found");
             }
 
-            try {
-                return Accounts.sendVerificationEmail(user._id);
-            } catch (error){
-                throw new Meteor.Error(403, "Alredy verified");
+            for (var i = 0; i < user.emails.length; i++) {
+                if (user.emails[i].address === address) {
+                    if (user.emails[i].verified === false) {
+                        try {
+                            Accounts.sendVerificationEmail(user._id, address);
+                        } catch (error) {
+                            console.log(error);
+                        }
+                    } else {
+                        throw new Meteor.Error(403, "Alredy verified");
+                    }
+                }
             }
         }
     });

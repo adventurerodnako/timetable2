@@ -20,7 +20,7 @@ Template.fogotPWD.events({
             } else {
                 console.log("Email reset link sent");
                 Bert.alert('Письмо со сбросом пароля отправлено, проверьте почту.',
-                    'success', 'growl-top-right');
+                    'success', 'fixed-bottom');
             }
         });
     }

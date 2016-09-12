@@ -1,10 +1,14 @@
 Template.email.helpers({
     userEmailPrimary: function() {
-        var emails = Meteor.user().emails;
-        return _.first(emails, 1);
+        if(Meteor.user().emails){
+            var emails = Meteor.user().emails;
+            return _.first(emails, 1);
+        }
     },
     userEmailsSecondary: function() {
-        return _.rest(Meteor.user().emails);
+        if(Meteor.user().emails){
+            return _.rest(Meteor.user().emails);
+        }
     }
 });
 
@@ -24,7 +28,7 @@ Template.email.events({
                 }
             } else {
                 Bert.alert('Новое письмо было вам отправлено. Если письмо не отображается во входящих, то проверьте папку со спамом.',
-                    'success', 'growl-top-right');
+                    'success', 'fixed-bottom');
                 console.log("email resend");
             }
         });
