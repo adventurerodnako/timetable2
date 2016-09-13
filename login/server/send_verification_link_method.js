@@ -3,7 +3,9 @@ if (Meteor.isServer) {
         sendVerificationLink: function() {
             var userId = Meteor.userId();
             if (userId) {
-                return Accounts.sendVerificationEmail(userId);
+                Meteor.defer(function(){
+                    Accounts.sendVerificationEmail(userId);
+                });
             }
         },
         resendVerificationLink: function(address) {
@@ -20,7 +22,9 @@ if (Meteor.isServer) {
                 if (user.emails[i].address === address) {
                     if (user.emails[i].verified === false) {
                         try {
-                            Accounts.sendVerificationEmail(user._id, address);
+                            Meteor.defer(function(){
+                                Accounts.sendVerificationEmail(user._id, address);
+                            });
                         } catch (error) {
                             console.log(error);
                         }

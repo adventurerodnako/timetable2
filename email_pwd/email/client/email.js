@@ -34,11 +34,15 @@ Template.email.events({
         });
     },
     "click .delEmail": function(event, template) {
-        Meteor.call("delEmail", this.address, function(error, result) {
+        var user = {
+            email: this.address,
+            userId: Meteor.userId()
+        };
+        Meteor.call("delEmail", user, function(error, result) {
             if (error) {
                 console.log("error", error);
-                if (error.reason === 'You must specify at least 1 values') {
-                    Bert.alert('Один email всегда должен быть.', 'danger', 'fixed-bottom');
+                if (error.reason === "User not found") {
+                    Bert.alert('Пользователь не найден!', 'danger', 'fixed-bottom');
                 }
             } else {
                 Bert.alert('Email успешно удален', 'success', 'fixed-bottom');
@@ -77,9 +81,12 @@ Template.addEmail.events({
                 if (error.reason === "Max emails limit") {
                     Bert.alert('Можно указать только 1 основной и 5 дополнительных почтовых адресов', 'danger', 'fixed-bottom');
                 }
+                if (error.reason === "User not found") {
+                    Bert.alert('Пользователь не найден!', 'danger', 'fixed-bottom');
+                }
             } else {
                 Modal.hide("addEmail");
-                Bert.alert('Email успешно добавлен', 'success', 'fixed-bottom');
+                Bert.alert('Email успешно добавлен. Письмо с подтверждением отправлено.', 'success', 'fixed-bottom');
             }
         });
     }
