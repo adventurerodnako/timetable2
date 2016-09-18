@@ -11,48 +11,29 @@
     border-color: white;
 }
 
-.details .panel-heading{
+.details .panel-heading {
     background-color: white;
     color: grey;
     border-bottom: none;
 }
 
-.details input, .details textarea,  .details select{
+.details input, .details textarea, .details select {
     border-radius: 0px;
 }
 
-/*.details .btn{
-    display: inline-block;
-	cursor: pointer;
-	background: purp;
-	color: #FFF;
-	text-decoration: none;
-	text-transform: uppercase;
-	padding: 5px 15px;
-	border: solid 3px purp;
-	border-radius: 2px;
-	font-weight: 800;
-	margin-top: 10px;
-}*/
-
-/*.details .btn .btn-primary, .details button .btn-primary{
-    background: grey;
-    border-color: grey
-}*/
-
-.details .list-group-item{
+.details .list-group-item {
     border: none;
 }
 
-.details .autoform-array-item{
+.details .autoform-array-item {
     border: none;
 }
 
-.details .btn:hover{
+.details .btn:hover {
     background-color: #d2d2d4;
 }
 
-.details .autoform-remove-item{
+.details .autoform-remove-item {
     background: #e6e6e6;
     box-shadow: none;
     border: none;
@@ -66,7 +47,7 @@
     margin-top: -15px;
 }
 
-.details .autoform-add-item{
+.details .autoform-add-item {
     width: 100%;
     border-radius: 0;
     border: none;
@@ -74,11 +55,11 @@
     background: #e6e6e6;
 }
 
-.details .autoform-remove-item-wrap{
+.details .autoform-remove-item-wrap {
     vertical-align: middle;
 }
 
-.details .saveDetails{
+.details .saveDetails {
     border-radius: 0px !important;
     width: 250px;
     margin-left: 30px;
@@ -89,6 +70,6 @@
     padding: 6px 12px;
 }
 
-.details .saveDetails:hover{
+.details .saveDetails:hover {
     background-color: #d2d2d4;
 }

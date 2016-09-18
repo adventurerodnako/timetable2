@@ -9,7 +9,7 @@ if (Meteor.isServer) {
                     throw new Meteor.Error(403, "Max emails limit");
                 }
                 for (var i = 0; i < userFind.emails.length; i++) {
-                    if(userFind.emails[i].address === user.email){
+                    if (userFind.emails[i].address === user.email) {
                         throw new Meteor.Error(403, "Email already exists.");
                     }
                 }
