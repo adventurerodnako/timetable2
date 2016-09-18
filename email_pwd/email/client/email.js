@@ -75,7 +75,7 @@ Template.addEmail.events({
         Meteor.call("addEmail", user, function(error, result) {
             if (error) {
                 console.log(error);
-                if (error.reason === "Internal server error") {
+                if (error.reason === "Email already exists.") {
                     Bert.alert('Почтовый адрес уже существует. Укажите другой.', 'danger', 'fixed-bottom');
                 }
                 if (error.reason === "Max emails limit") {

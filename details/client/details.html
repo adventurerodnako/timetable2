@@ -1,0 +1,15 @@
+<template name="details">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <ol class="breadcrumb breadcrumb-arrow">
+              <li><a href="{{pathFor "profile"}}">Профиль</a></li>
+              <li class="active"><span>Ваши данные</span></li>
+            </ol>
+            <h4 class="title-box">Изменить данные профиля</h4>
+            <div class="white-box details">
+                {{> quickForm collection="Meteor.users" resetOnSuccess=false id="details" doc=currentUser type="update" buttonClasses="saveDetails" buttonContent="Сохранить" omitFields="services, createdAt, emails, roles"}}
+            </div>
+            <br>
+        </div>
+    </div>
+</template>

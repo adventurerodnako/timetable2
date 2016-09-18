@@ -3,6 +3,7 @@ var Schemas = {};
 Schemas.UserProfile = new SimpleSchema({
     name: {
         type: String,
+        label: "Имя пользователя",
         autoform: {
             label: false,
             placeholder: "Имя пользователя"
@@ -12,6 +13,7 @@ Schemas.UserProfile = new SimpleSchema({
     },
     firstName: {
         type: String,
+        label: "Имя",
         max: 250,
         optional: true,
         autoform: {
@@ -21,6 +23,7 @@ Schemas.UserProfile = new SimpleSchema({
     },
     middleName: {
         type: String,
+        label: "Отчество",
         autoform: {
             label: false,
             placeholder: "Отчество"
@@ -30,6 +33,7 @@ Schemas.UserProfile = new SimpleSchema({
     },
     lastName: {
         type: String,
+        label: "Фамилия",
         autoform: {
             label: false,
             placeholder: "Фамилия"
@@ -40,6 +44,7 @@ Schemas.UserProfile = new SimpleSchema({
     birthday: {
         type: Date,
         optional: true,
+        label: "Дата рождения",
         autoform: {
             label: false,
             placeholder: "Дата рождения",
@@ -55,6 +60,7 @@ Schemas.UserProfile = new SimpleSchema({
     gender: {
         type: String,
         optional: true,
+        label: "Выберите пол",
         allowedValues: ['Муж', 'Жен'],
         autoform: {
             label: false,
@@ -76,6 +82,7 @@ Schemas.UserProfile = new SimpleSchema({
     description: {
         type: String,
         optional: true,
+        label: "О себе",
         max: 2000,
         autoform: {
             placeholder: "О себе",
@@ -88,6 +95,7 @@ Schemas.UserProfile = new SimpleSchema({
     },
     organization: {
         type: String,
+        label: "Организация",
         autoform: {
             label: false,
             placeholder: "Организация"
@@ -95,14 +103,19 @@ Schemas.UserProfile = new SimpleSchema({
         max: 250,
         optional: true
     },
-    addressWork: {
-        type: String,
-        optional: true,
+    address: {
+        type: Number,
+        label: "Адрес",
         autoform: {
             label: false,
-            placeholder: "Адрес"
-        },
-        max: 250
+            afFieldInput: {
+                type: "universe-select",
+                valuesLimit: 5,
+                uniPlaceholder: "Выберите населенный пункт",
+                optionsPlaceholder: true,
+                optionsMethod: "getOptionsRelated"
+            }
+        }
     },
     telnumbers: {
         type: [String],

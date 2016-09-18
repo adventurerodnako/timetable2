@@ -8,6 +8,11 @@ if (Meteor.isServer) {
                 if (userFind.emails.length > 5) {
                     throw new Meteor.Error(403, "Max emails limit");
                 }
+                for (var i = 0; i < userFind.emails.length; i++) {
+                    if(userFind.emails[i].address === user.email){
+                        throw new Meteor.Error(403, "Email already exists.");
+                    }
+                }
                 Accounts.addEmail(user.userId, user.email);
                 Meteor.call("resendVerificationLink", user.email, function(error, result) {
                     if (error) {
