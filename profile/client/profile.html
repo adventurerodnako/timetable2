@@ -1,7 +1,22 @@
 <template name="profile">
 	<div class="row">
         <div class="col-md-8 col-md-offset-2">
-			<input type="file" />
+			<div class="media">
+				<a href="#" class="pull-left">
+					<div class="custom-input-file">
+						<img class="media-object img-circle" src="https://timetable777.s3-eu-central-1.amazonaws.com/1474393197544_images.png" alt="">
+		            	<label class="uploadPhoto">
+		                	<i class="fa fa-3x fa-pencil"></i>
+		                	<input type="file" class="change-avatar" name="avatar" id="avatar">
+		                </label>
+		            </div>
+				</a>
+				<div class="media-body">
+					<h2 class="media-heading">Ширлинг Андрей</h2>
+					<h4 class="profile-email">shirling@mail.ru</h4>
+				</div>
+			</div>
+			<br>
             <h4 class="title-box">Профиль</h4>
             <div class="white-box">
                 <ul class="rows-box">
@@ -31,8 +46,3 @@
         </div>
     </div>
 </template>
-
-
-
-
-<!-- {{> quickForm resetOnSuccess=false collection="Meteor.users" id="profile" doc=currentUser type="update" buttonContent="Сохранить" omitFields="services,createdAt,roles"}} -->

@@ -3,8 +3,8 @@ Template.profile.events({
         var files = e.currentTarget.files;
 
         Resizer.resize(files[0], {
-            width: 300,
-            height: 300,
+            width: 64,
+            height: 64,
             cropSquare: true
         }, function(err, file) {
 
