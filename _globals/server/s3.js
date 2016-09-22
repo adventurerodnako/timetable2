@@ -8,6 +8,10 @@ Slingshot.createDirective("myFileUploads", Slingshot.S3Storage, {
 
     authorize: function() {
         //Deny uploads if user is not logged in.
+        if (!Meteor.userId()) {
+          var message = "Please login before posting files";
+          throw new Meteor.Error("Login Required", message);
+        }
         return true;
     },
 

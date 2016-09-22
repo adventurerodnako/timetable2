@@ -57,3 +57,4 @@ coffeescript
 percolate:momentum
 thinksoftware:image-resize-client
 edgee:slingshot
+peerlibrary:aws-sdk

@@ -14,11 +14,15 @@ Template.profile.events({
                 if (err)
                     console.log(err);
 
-                console.log(downloadUrl);
+                console.log("save image " + downloadUrl);
 
+                Meteor.call("saveUrlImage", downloadUrl, function (error, result) {
+                    if (error) {
+                        console.log(error);
+                        Bert.alert(error.reason, 'danger', 'fixed-bottom');
+                    }
+                });
             });
-
         });
-
     }
 });

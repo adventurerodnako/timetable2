@@ -4,16 +4,23 @@
 			<div class="media">
 				<a href="#" class="pull-left">
 					<div class="custom-input-file">
-						<img class="media-object img-circle" src="https://timetable777.s3-eu-central-1.amazonaws.com/1474393197544_images.png" alt="">
-		            	<label class="uploadPhoto">
-		                	<i class="fa fa-3x fa-pencil"></i>
-		                	<input type="file" class="change-avatar" name="avatar" id="avatar">
-		                </label>
+						<img class="media-object img-circle" src="{{currentUser.profile.profileImageUrl}}" alt="">
+						{{#if currentUser.profile.profileImageUrl}}
+			            	<label class="uploadPhoto">
+			                	<i class="fa fa-3x fa-pencil"></i>
+			                	<input type="file" class="change-avatar" name="avatar" id="avatar">
+			                </label>
+						{{else}}
+							<label class="uploadPhotoNotImage">
+								<i class="fa fa-3x fa-pencil"></i>
+								<input type="file" class="change-avatar" name="avatar" id="avatar">
+							</label>
+						{{/if}}
 		            </div>
 				</a>
 				<div class="media-body">
-					<h2 class="media-heading">Ширлинг Андрей</h2>
-					<h4 class="profile-email">shirling@mail.ru</h4>
+					<h2 class="media-heading">{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</h2>
+					<h4 class="profile-email">{{currentUser.emails.[0].address}}</h4>
 				</div>
 			</div>
 			<br>

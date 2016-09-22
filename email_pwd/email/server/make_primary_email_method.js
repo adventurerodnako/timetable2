@@ -5,6 +5,7 @@ if (Meteor.isServer) {
             var user = Meteor.users.findOne({
                 "emails.address": email
             });
+            // TO DO: add Meteor.user()
 
             if (!user) {
                 throw new Meteor.Error(403, "User not found");

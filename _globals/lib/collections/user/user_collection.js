@@ -106,6 +106,7 @@ Schemas.UserProfile = new SimpleSchema({
     address: {
         type: Number,
         label: "Адрес",
+        // optional: true,
         autoform: {
             label: false,
             afFieldInput: {
@@ -122,6 +123,14 @@ Schemas.UserProfile = new SimpleSchema({
         optional: true,
         label: "Телефоны",
         maxCount: 5
+    },
+    profileImageUrl: {
+        type: String,
+        optional: true,
+        autoform: {
+            label: false,
+            type: "hidden"
+        }
     }
 });
 
