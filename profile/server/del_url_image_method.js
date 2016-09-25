@@ -5,8 +5,8 @@ if (Meteor.isServer) {
             check(Meteor.userId(), String);
 
             AWS.config.update({
-                accessKeyId: "AKIAJ52HU6A55DHRL63Q",
-                secretAccessKey: "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"
+                accessKeyId: Meteor.settings.private.aws.AWSAccessKeyId,
+                secretAccessKey: Meteor.settings.private.aws.AWSSecretAccessKey
             });
 
             var split = url.split("/");
@@ -14,7 +14,7 @@ if (Meteor.isServer) {
             var s3 = new AWS.S3();
 
             var params = {
-                Bucket: "timetable777",
+                Bucket: Meteor.settings.private.aws.bucket,
                 Key: split[split.length - 1]
             };
 

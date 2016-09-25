@@ -4,8 +4,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'facebook',
-    appId: '285133305201439',
-    secret: '86ec3ff3fd59fa0e023c44bf6212fe56'
+    appId: Meteor.settings.private.facebook.appId,
+    secret: Meteor.settings.private.facebook.secret
 });
 
 ServiceConfiguration.configurations.remove({
@@ -14,8 +14,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'twitter',
-    consumerKey: 'ZCJDyNC88oZl55Z89PNGBW0v1',
-    secret: 'uxvRpalher8oqEPSMz8odebLAqoVY2D2Ijlht95c1iKG8u5ZBv'
+    consumerKey: Meteor.settings.private.twitter.consumerKey,
+    secret: Meteor.settings.private.twitter.secret
 });
 
 ServiceConfiguration.configurations.remove({
@@ -24,8 +24,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'google',
-    clientId: '544476190860-t5fc5k75g4o5jfmpim78pbtjdvsvihau.apps.googleusercontent.com',
-    secret: 'N0ULff1tsJ074eLvtHhebmMI'
+    clientId: Meteor.settings.private.google.clientId,
+    secret: Meteor.settings.private.google.secret
 });
 
 ServiceConfiguration.configurations.remove({
@@ -34,8 +34,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'github',
-    clientId: '99d8444a2d90e6b27c49',
-    secret: '99d9cc196ff40379c12d2b7864d93cf9b633054a'
+    clientId: Meteor.settings.private.github.clientId,
+    secret: Meteor.settings.private.github.secret
 });
 
 ServiceConfiguration.configurations.remove({
@@ -44,8 +44,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'vk',
-    appId:   '5612596',      // Your app id
-    secret:  '7aho4PrVuFJy3VCNcLxX' // Your app secret
+    appId: Meteor.settings.private.vk.appId, // Your app id
+    secret: Meteor.settings.private.vk.secret // Your app secret
 });
 
 ServiceConfiguration.configurations.remove({
@@ -54,8 +54,8 @@ ServiceConfiguration.configurations.remove({
 
 ServiceConfiguration.configurations.insert({
     service: 'ok',
-    appId:   '1248075264',       // Your app id
-    secret:  '3EA123C6EDBF182488D174CD', // Your app secret
-    public:  'CBAPBFGLEBABABABA', // Your app public code
-    scope:   'http://www.odnoklassniki.ru/game/1248075264'         // Scopes split by ";"
+    appId: Meteor.settings.private.ok.appId, // Your app id
+    secret: Meteor.settings.private.ok.secret, // Your app secret
+    public: Meteor.settings.private.ok.public, // Your app public code
+    scope: Meteor.settings.private.ok.scope // Scopes split by ";"
 });

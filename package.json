@@ -17,6 +17,7 @@
         "sinon-chai": "^2.8.0"
     },
     "scripts":{
-        "test": "mocha ./tests --compilers js:babel-register"
+        "test": "mocha ./tests --compilers js:babel-register",
+        "start": "meteor --settings settings-development.json"
     }
 }
