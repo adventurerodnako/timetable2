@@ -29,6 +29,9 @@ Template.signin.events({
         Meteor.loginWithFacebook({}, function(err){
             if (err) {
                 throw new Meteor.Error("Facebook login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     },
@@ -36,6 +39,9 @@ Template.signin.events({
         Meteor.loginWithTwitter({}, function(err){
             if (err) {
                 throw new Meteor.Error("Twitter login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     },
@@ -43,6 +49,9 @@ Template.signin.events({
         Meteor.loginWithGoogle({}, function(err){
             if (err) {
                 throw new Meteor.Error("Google login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     },
@@ -50,6 +59,9 @@ Template.signin.events({
         Meteor.loginWithGithub({}, function(err){
             if (err) {
                 throw new Meteor.Error("Github login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     },
@@ -57,6 +69,9 @@ Template.signin.events({
         Meteor.loginWithVk({}, function(err){
             if (err) {
                 throw new Meteor.Error("VK login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     },
@@ -64,6 +79,9 @@ Template.signin.events({
         Meteor.loginWithOk({}, function(err){
             if (err) {
                 throw new Meteor.Error("Ok login failed");
+            } else {
+                console.log('User sign in');
+                FlowRouter.go('general');
             }
         });
     }

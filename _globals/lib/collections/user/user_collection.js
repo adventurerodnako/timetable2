@@ -106,7 +106,7 @@ Schemas.UserProfile = new SimpleSchema({
     address: {
         type: Number,
         label: "Адрес",
-        // optional: true,
+        optional: true,
         autoform: {
             label: false,
             afFieldInput: {
@@ -137,6 +137,7 @@ Schemas.UserProfile = new SimpleSchema({
 Schemas.User = new SimpleSchema({
     emails: {
         type: [Object],
+        optional: true,
         minCount: 1,
         autoform: {
             label: false,
@@ -145,6 +146,7 @@ Schemas.User = new SimpleSchema({
     },
     "emails.$.address": {
         type: String,
+        optional: true,
         autoform: {
             label: false,
             placeholder: "email*"
@@ -162,7 +164,8 @@ Schemas.User = new SimpleSchema({
     },
     createdAt: {
         type: Date,
-        label: "Дата создания*"
+        label: "Дата создания*",
+        optional: true
     },
     profile: {
         type: Schemas.UserProfile,
