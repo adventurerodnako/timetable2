@@ -12,9 +12,10 @@ if (Meteor.isServer) {
             if (user.services.vk.last_name) {
                 user.profile.lastName = user.services.vk.last_name;
             }
-            // if (user.services.vk.bdate) {
-            //     user.profile.birthday = user.services.vk.bdate;
-            // }
+            if (user.services.vk.bdate) {
+                var parts = user.services.vk.bdate.split('.');
+                user.profile.birthday = new Date(parts[2], parts[1]-1, +parts[0]+1);
+            }
             if (user.services.vk.sex) {
                 if (user.services.vk.sex === 2) {
                     user.profile.gender = "Муж";
@@ -23,6 +24,8 @@ if (Meteor.isServer) {
                 }
             }
         }
+        // Facebook
+        
         return user;
     });
 }
