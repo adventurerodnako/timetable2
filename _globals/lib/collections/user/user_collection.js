@@ -21,16 +21,6 @@ Schemas.UserProfile = new SimpleSchema({
             placeholder: "Имя"
         }
     },
-    middleName: {
-        type: String,
-        label: "Отчество",
-        autoform: {
-            label: false,
-            placeholder: "Отчество"
-        },
-        max: 250,
-        optional: true
-    },
     lastName: {
         type: String,
         label: "Фамилия",

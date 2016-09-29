@@ -24,8 +24,62 @@ if (Meteor.isServer) {
                 }
             }
         }
+        // Github
+        if (user.services.github) {
+            if (user.services.github.username) {
+                user.profile.name = user.services.github.username;
+            }
+        }
         // Facebook
-        
+        if (user.services.facebook) {
+            if (user.services.facebook.first_name) {
+                user.profile.firstName = user.services.facebook.first_name;
+            }
+            if (user.services.facebook.last_name) {
+                user.profile.lastName = user.services.facebook.last_name;
+            }
+            if (user.services.facebook.gender) {
+                if (user.services.facebook.gender === 'male') {
+                    user.profile.gender = "Муж";
+                } else if (user.services.facebook.gender === 'female') {
+                    user.profile.gender = "Жен";
+                }
+            }
+        }
+        // OK
+        if (user.services.ok) {
+            if (user.services.ok.first_name) {
+                user.profile.firstName = user.services.ok.first_name;
+            }
+            if (user.services.ok.last_name) {
+                user.profile.lastName = user.services.ok.last_name;
+            }
+            if (user.services.ok.birthday) {
+                user.profile.birthday = moment(user.services.ok.birthday).add(1, 'days').format();
+            }
+            if (user.services.ok.gender) {
+                if (user.services.ok.gender === 'male') {
+                    user.profile.gender = "Муж";
+                } else if (user.services.ok.gender === 'female') {
+                    user.profile.gender = "Жен";
+                }
+            }
+        }
+        // Twitter
+        if (user.services.twitter) {
+            if (user.services.twitter.screenName) {
+                user.profile.name = user.services.twitter.screenName;
+            }
+        }
+        // Google
+        if (user.services.google) {
+            if (user.services.google.given_name) {
+                user.profile.firstName = user.services.google.given_name;
+            }
+            if (user.services.google.family_name) {
+                user.profile.lastName = user.services.google.family_name;
+            }
+        }
         return user;
     });
 }
