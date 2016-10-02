@@ -1,0 +1,34 @@
+.fc-event-container {
+    padding: 5px !important
+}
+
+.fc-event {
+    padding: 5px 10px;
+    border-color: #ddd;
+    background-color: #fff !important;
+}
+
+.fc-content {
+    color: #444;
+}
+
+.fc-content h4 {
+    margin: 0;
+    font-weight: normal;
+    color: #666;
+    font-size: 13px;
+    line-height: 18px;
+    white-space: normal;
+}
+
+.fc-content h5 {
+    margin: 0;
+    font-weight: normal;
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.fc-content .coast {
+    margin: 5px 0;
+}
