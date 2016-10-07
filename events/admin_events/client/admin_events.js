@@ -27,8 +27,9 @@ Template.admin_events.onRendered(function() {
             );
         },
         dayClick(date){
-            Session.set('eventModal', {type: 'add', date: date.format()});
-            $('#add-edit-event-modal').modal('show');
+            // Session.set('eventModal', {type: 'add', date: date.format()});
+            // $('#add-edit-event-modal').modal('show');
+            Modal.show("addEvent");
         },
         eventClick(event){
             Session.set('eventModal', {type: 'edit', event: event._id});
@@ -40,4 +41,15 @@ Template.admin_events.onRendered(function() {
         Events.find().fetch();
         $('#events-calendar').fullCalendar('refetchEvents');
     });
+});
+
+AutoForm.addHooks(['events'], {
+    onSuccess: function(insert, result) {
+        Bert.alert('Мероприятие сохранено', 'success', 'fixed-bottom');
+        console.log("User update");
+    },
+    onError: function(insert, error) {
+        Bert.alert(error, 'danger', 'fixed-bottom');
+        console.log(error);
+    }
 });

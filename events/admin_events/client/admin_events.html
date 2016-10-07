@@ -12,17 +12,13 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-8">
-                            <form id="addEmailForm">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" value="" placeholder="введите email" autofocus>
-                                </div>
-                            </form>
+                            {{> quickForm collection="Events" resetOnSuccess=false id="events" type="insert" buttonClasses="saveDetails" buttonContent="Сохранить"}}
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button id="addEvent" type="button" class="btn btn-primary pull-left">Сохранить</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
