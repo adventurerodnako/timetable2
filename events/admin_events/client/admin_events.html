@@ -1,5 +1,11 @@
 <template name="admin_events">
-    <div id="events-calendar"></div>
+    <!-- {{#momentum plugin="fade"}} -->
+        <!-- {{#if Template.subscriptionsReady}} -->
+            <div id="events-calendar"></div>
+        <!-- {{else}}
+            {{> loader}}
+        {{/if}} -->
+    <!-- {{/momentum}} -->
 </template>
 
 <template name="addEvent">
@@ -12,7 +18,20 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-8">
-                            {{> quickForm collection="Events" resetOnSuccess=false id="events" type="insert" buttonClasses="saveDetails" buttonContent="Сохранить"}}
+                            <!-- Form -->
+                            <form class="addEvent">
+                                <div class="form-group">
+                                    <input type="text" name="title" class="form-control" placeholder="Заголовок события">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="description" class="form-control" rows="4" cols="40" placeholder="Описание события"></textarea>
+                                </div>
+                                <div class="input-group datetimepicker">
+                                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                  <input type="text" class="set-due-date form-control" placeholder="">
+                                </div>
+                            </form>
+                            <!-- End Form -->
                         </div>
                     </div>
                 </div>

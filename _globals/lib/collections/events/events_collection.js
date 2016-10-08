@@ -1,21 +1,39 @@
 global.Events = new Mongo.Collection("events");
 
 var EventsSchema = new SimpleSchema({
-    'title':{
+    title:{
         type: String,
         label: 'Заголовок события',
+        autoform:{
+            label: false,
+            placeholder: 'Заголовок события'
+        }
     },
-    'start':{
+    description: {
         type: String,
-        label:'Начало события'
+        optional: true,
+        label: "О себе"
     },
-    'end':{
-        type: String,
-        label: 'Окончание события'
+    start: {
+        type: Date,
+        optional: true,
+        label: "Начало события"
     },
-    'coast':{
-        type: String,
+    end: {
+        type: Date,
+        optional: true,
+        label: "Окончание события"
+    },
+    coast:{
+        type: Number,
+        optional: true,
         label: 'Стоимость'
+    },
+    ownerId:{
+        type: String,
+        autoform: {
+            type: "hidden"
+        }
     }
 });
 

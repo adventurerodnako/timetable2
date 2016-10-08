@@ -32,3 +32,8 @@
 .fc-content .coast {
     margin: 5px 0;
 }
+
+#events-calendar {
+    background-color: white;
+    padding: 10px;
+}

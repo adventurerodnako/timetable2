@@ -41,9 +41,10 @@ Schemas.UserProfile = new SimpleSchema({
             type: "bootstrap-datepicker",
             "data-date-autoclose": "true",
             datePickerOptions: {
-                format: "dd-mm-yyyy",
+                format: "dd.mm.yyyy",
                 startView: "day",
-                minViewMode: "year"
+                minViewMode: "year",
+                language: 'ru'
             }
         }
     },

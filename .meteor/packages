@@ -59,3 +59,8 @@ thinksoftware:image-resize-client
 edgee:slingshot
 peerlibrary:aws-sdk
 fullcalendar:fullcalendar
+session
+aldeed:autoform-bs-datetimepicker
+vazco:universe-selectize
+tsega:bootstrap3-datetimepicker
+planettraining:ng-fullcalendar-lang-assets
