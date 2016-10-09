@@ -94,6 +94,19 @@ Schemas.UserProfile = new SimpleSchema({
         max: 250,
         optional: true
     },
+    url:{
+        type: String,
+        optional: true,
+        regEx: SimpleSchema.RegEx.Url,
+        label: "Личный сайт",
+        autoform:{
+            label:false,
+            afFieldInput:{
+                type: "url",
+                placeholder: "Личный сайт"
+            }
+        }
+    },
     address: {
         type: Number,
         label: "Адрес",

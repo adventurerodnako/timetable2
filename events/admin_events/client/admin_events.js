@@ -2,6 +2,10 @@ Template.addEvent.onRendered(function() {
     $('.datetimepicker').datetimepicker({
         locale: 'ru'
     });
+    $('.froala-editor').froalaEditor({
+        placeholderText: 'Описание мероприятия',
+        heightMin: 80
+    });
 });
 
 Template.admin_events.onCreated(function() {
@@ -41,7 +45,6 @@ Template.admin_events.onRendered(function() {
             });
             // $('#add-edit-event-modal').modal('show');
             Modal.show("addEvent");
-            console.log(moment(date).format("DD.MM.YYYY"));
         },
         eventClick(event) {
             Session.set('eventModal', {
