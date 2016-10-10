@@ -19,53 +19,109 @@
                     <div class="row">
                         <div class="col-md-12">
                             <!-- Form -->
-                            <form class="addEvent">
+                            <form class="add-event">
                                 <div class="form-group">
                                     <input type="text" name="title" class="form-control" placeholder="Заголовок мероприятия">
                                 </div>
-                                <!-- <div class="form-group">
-                                    <textarea name="description" class="form-control" rows="4" cols="40" placeholder="Описание мероприятия"></textarea>
-                                </div> -->
                                 <div class="form-group">
                                     <div class="froala-editor"></div>
                                 </div>
-                                <h4 class="page-header">Время мероприятия</h4>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="input-group datetimepicker">
-                                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                          <input type="text" name="start" class="set-due-date form-control" placeholder="Начало мероприятия">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="page-header">Цвет текста</h5>
+                                        <div class="form-group">
+                                            <div class="input-group colorpicker-component text-color">
+                                                <input type="text" name="textColor" class="form-control" value="#F2F2F2">
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="page-header">Цвет фона</h5>
+                                        <div class="form-group">
+                                            <div class="input-group colorpicker-component background-color">
+                                                <input type="text" name="backgroundColor" class="form-control" value="#F2F2F2">
+                                                <span class="input-group-addon"><i></i></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <div class="input-group datetimepicker">
-                                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                          <input type="text" name="end" class="set-due-date form-control" placeholder="Окончание мероприятия">
+                                <h5 class="page-header">Время мероприятия</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group datetimepicker">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                              <input type="text" name="start" class="set-due-date form-control" placeholder="Начало мероприятия">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group datetimepicker">
+                                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                              <input type="text" name="end" class="set-due-date form-control" placeholder="Окончание мероприятия">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <h4 class="page-header">Стоимость мероприятия</h4>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="number" name="coastAdult" class="form-control" placeholder="Стоимость для взрослых">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <h5 class="every-day-header">Повторять каждый:</h5>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">пн
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">вт
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">ср
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">чт
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">пт
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">сб
+                                            </label>
+                                            <label class="form-check-inline label-normal">
+                                                <input type="checkbox" class="form-check-input" value="">вс
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                </div>
+                                <h5 class="page-header">Стоимость мероприятия</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="number" name="coastAdult" class="form-control" placeholder="Стоимость для взрослых">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="number" name="coastChildren" class="form-control" placeholder="Стоимость для детей">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="number" name="coastChildren" class="form-control" placeholder="Стоимость для детей">
-                                    </div>
-                                </div>
-                                
-                                <h4 class="page-header">Адрес</h4>
+                                <h5 class="page-header">Адрес</h5>
                                 <div class="form-group">
                                     {{> universeSelectize name="address" optionsMethod="getOptionsRelated" placeholder="Выберите населенный пункт" optionsPlaceholder="Выберите населенный пункт"}}
                                 </div>
-                                <h4 class="page-header">Контактный телефон</h4>
+                                <h5 class="page-header">Контактный телефон</h5>
                                 <div class="form-group">
                                     <input type="text" name="telnumber" class="form-control" placeholder="Контактный телефон">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <label class="form-check-label label-normal">
+                                            <input type="checkbox" class="form-check-input" name="some_name" value="">
+                                            <span class="success">Сохранить как шаблон</span>
+                                        </label>
+                                    </div>
                                 </div>
                             </form>
                             <!-- End Form -->

@@ -1,4 +1,6 @@
 Template.addEvent.onRendered(function() {
+    $('.text-color').colorpicker();
+    $('.background-color').colorpicker();
     $('.datetimepicker').datetimepicker({
         locale: 'ru'
     });

@@ -37,3 +37,11 @@
     background-color: white;
     padding: 10px;
 }
+
+.add-event .page-header {
+    margin-top: 5px;
+}
+
+.every-day-header {
+    text-decoration: underline;
+}

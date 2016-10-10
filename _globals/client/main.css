@@ -117,3 +117,14 @@
 .breadcrumb-arrow li span {
     color: #434a54
 }
+
+/*ADD EVENT*/
+
+.label-normal {
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.success {
+    color: green;
+}
