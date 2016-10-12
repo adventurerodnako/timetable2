@@ -38,10 +38,29 @@
     padding: 10px;
 }
 
-.add-event .page-header {
+.add-event-wizard .tab-pane {
+    height: 300px;
+}
+
+.add-event-wizard .page-header {
     margin-top: 5px;
 }
 
 .every-day-header {
     text-decoration: underline;
+}
+
+.add-event-wizard .add-item {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: #e6e6e6;
+    color: white;
+}
+
+.add-event-wizard .add-item:hover {
+    background-color: #d2d2d4;
 }

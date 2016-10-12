@@ -1,8 +1,31 @@
 Template.addEvent.onRendered(function() {
+    $('.add-event-wizard').bootstrapWizard({
+        onTabShow: function(tab, navigation, index) {
+            var $total = navigation.find('li').length;
+            var $current = index + 1;
+            var $percent = ($current / $total) * 100;
+            $('.add-event-wizard .progress-bar').css({
+                width: $percent + '%'
+            });
+            if ($current === $total) {
+                $('.add-event-wizard').find('.pager .next').hide();
+                $('.add-event-wizard').find('.pager .finish').show();
+                $('.add-event-wizard').find('.pager .finish').removeClass('disabled');
+            } else {
+                $('.add-event-wizard').find('.pager .finish').hide();
+                $('.add-event-wizard').find('.pager .next').show();
+            }
+        }
+    });
     $('.text-color').colorpicker();
     $('.background-color').colorpicker();
     $('.datetimepicker').datetimepicker({
-        locale: 'ru'
+        locale: 'ru',
+        format: 'DD.MM.YYYY'
+    });
+    $('.timepicker').datetimepicker({
+        locale: 'ru',
+        format: 'hh:mm'
     });
     $('.froala-editor').froalaEditor({
         placeholderText: 'Описание мероприятия',
