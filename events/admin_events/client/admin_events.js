@@ -1,35 +1,89 @@
+Template.addEvent.helpers({
+    times: function() {
+        return Session.get("times");
+    }
+});
+
+Template.addEvent.events({
+    "click .add-item": function(event, template) {
+        var arrayTimes = Session.get("times");
+        arrayTimes.push({
+            id: Random.id(),
+            start: "",
+            end: "",
+            duration: ""
+        });
+        Session.set("times", arrayTimes)
+    },
+    "click .remove-item": function(e, template) {
+        e.preventDefault();
+        var arrayTimes = Session.get("times");
+        Session.set("times", _.without(arrayTimes, _.findWhere(arrayTimes, {id: this.id})));
+        console.log(this);
+    }
+});
+
+Template.addEvent.onCreated(function() {
+    return Session.set("times", [{
+        id: Random.id(),
+        start: "",
+        end: "",
+        duration: ""
+    }]);
+});
+
 Template.addEvent.onRendered(function() {
-    $('.add-event-wizard').bootstrapWizard({
-        onTabShow: function(tab, navigation, index) {
-            var $total = navigation.find('li').length;
-            var $current = index + 1;
-            var $percent = ($current / $total) * 100;
-            $('.add-event-wizard .progress-bar').css({
-                width: $percent + '%'
-            });
-            if ($current === $total) {
-                $('.add-event-wizard').find('.pager .next').hide();
-                $('.add-event-wizard').find('.pager .finish').show();
-                $('.add-event-wizard').find('.pager .finish').removeClass('disabled');
-            } else {
-                $('.add-event-wizard').find('.pager .finish').hide();
-                $('.add-event-wizard').find('.pager .next').show();
-            }
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+
+        var $target = $(e.target);
+
+        if ($target.parent().hasClass('disabled')) {
+            return false;
         }
     });
+
+    $(".next-step").click(function(e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.next().removeClass('disabled');
+        nextTab($active);
+
+    });
+    $(".prev-step").click(function(e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        prevTab($active);
+
+    });
+
+    function nextTab(elem) {
+        $(elem).next().find('a[data-toggle="tab"]').click();
+    }
+
+    function prevTab(elem) {
+        $(elem).prev().find('a[data-toggle="tab"]').click();
+    }
+
     $('.text-color').colorpicker();
     $('.background-color').colorpicker();
     $('.datetimepicker').datetimepicker({
         locale: 'ru',
         format: 'DD.MM.YYYY'
     });
-    $('.timepicker').datetimepicker({
-        locale: 'ru',
-        format: 'hh:mm'
-    });
     $('.froala-editor').froalaEditor({
         placeholderText: 'Описание мероприятия',
         heightMin: 80
+    });
+});
+
+Template.time.onRendered(function() {
+    $('.timepicker').datetimepicker({
+        locale: 'ru',
+        format: 'hh:mm'
     });
 });
 

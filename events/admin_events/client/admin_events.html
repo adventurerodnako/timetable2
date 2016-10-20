@@ -16,179 +16,226 @@
                     <h4 class="modal-title">Добавить мероприятие</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="add-event-wizard">
-                        <div class="navbar">
-                            <div class="navbar-inner">
-                                <div class="container">
-                                    <ul>
-                                        <li><a href="#tab1" data-toggle="tab">Описание</a></li>
-                                        <li><a href="#tab2" data-toggle="tab">Фото</a></li>
-                                        <li><a href="#tab3" data-toggle="tab">Дата и время</a></li>
-                                        <li><a href="#tab4" data-toggle="tab">Цвет</a></li>
-                                        <li><a href="#tab5" data-toggle="tab">Стоимость</a></li>
-                                        <li><a href="#tab6" data-toggle="tab">Адрес</a></li>
-                                        <li><a href="#tab7" data-toggle="tab">Телефон</a></li>
-                                    </ul>
-                                </div>
+                    <div class="row">
+                        <section>
+                        <div class="wizard">
+                            <div class="wizard-inner">
+                                <div class="connecting-line"></div>
+                                <ul class="nav nav-tabs" role="tablist">
+
+                                    <li role="presentation" class="active">
+                                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Описание">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-pencil"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation" class="disabled">
+                                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Фото">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-picture"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation" class="disabled">
+                                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Дата и время">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-calendar"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation" class="disabled">
+                                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Завершено">
+                                            <span class="round-tab">
+                                                <i class="glyphicon glyphicon-ok"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
+
+                            <form role="form">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" role="tabpanel" id="step1">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3>Описание</h3>
+                                                <div class="form-group">
+                                                    <input type="text" name="title" class="form-control" placeholder="Заголовок мероприятия">
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="froala-editor"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="coastAdult">Стоимость для взрослых</label>
+                                                    <input type="number" name="coastAdult" class="form-control" placeholder="Стоимость для взрослых">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="coastChildren">Стоимость для детей</label>
+                                                    <input type="number" name="coastChildren" class="form-control" placeholder="Стоимость для детей">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Цвет текста</label>
+                                                    <div class="input-group colorpicker-component text-color">
+                                                        <input type="text" name="textColor" class="form-control" value="#F2F2F2">
+                                                        <span class="input-group-addon"><i></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Цвет фона</label>
+                                                    <div class="input-group colorpicker-component background-color">
+                                                        <input type="text" name="backgroundColor" class="form-control" value="#F2F2F2">
+                                                        <span class="input-group-addon"><i></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="address">Адрес</label>
+                                                    {{> universeSelectize name="address" optionsMethod="getOptionsRelated" placeholder="Выберите населенный пункт" optionsPlaceholder="Выберите населенный пункт"}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button" class="btn btn-primary next-step">Сохоанить и продолжить</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="step2">
+
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button" class="btn btn-default prev-step">Предыдущая</button></li>
+                                            <li><button type="button" class="btn btn-primary next-step">Сохранить и продолжить</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="step3">
+                                        <h3>Дата и время</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group datetimepicker">
+                                                      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                      <input type="text" name="start" class="set-due-date form-control" placeholder="Начало мероприятия">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group datetimepicker">
+                                                      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                      <input type="text" name="end" class="set-due-date form-control" placeholder="Окончание мероприятия">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <h5 class="every-day-header">Повторять каждый:</h5>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">пн
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">вт
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">ср
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">чт
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">пт
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">сб
+                                                    </label>
+                                                    <label class="form-check-inline label-normal">
+                                                        <input type="checkbox" class="form-check-input" value="">вс
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"></div>
+                                        </div>
+                                        {{#each times}}
+                                            {{> time}}
+                                        {{/each}}
+                                        <button type="button" class="add-item">
+                                            <i class="glyphicon glyphicon-plus"></i>
+                                        </button>
+                                        <ul class="list-inline pull-right">
+                                            <li><button type="button" class="btn btn-default prev-step">Предыдущая</button></li>
+                                            <!-- <li><button type="button" class="btn btn-default next-step">Skip</button></li> -->
+                                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Сохранить и продолжить</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="complete">
+                                        <h3>Завершено</h3>
+                                        <p>Вы успешно завершили все шаги.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
                         </div>
-                        <div id="bar" class="progress">
-                          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                        </div>
-                        <div class="tab-content">
-                            <div class="tab-pane" id="tab1">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" name="title" class="form-control" placeholder="Заголовок мероприятия">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="froala-editor"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab2">
-                                2
-                            </div>
-                            <div class="tab-pane" id="tab3">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group datetimepicker">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                              <input type="text" name="start" class="set-due-date form-control" placeholder="Начало мероприятия">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="input-group datetimepicker">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                              <input type="text" name="end" class="set-due-date form-control" placeholder="Окончание мероприятия">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <h5 class="every-day-header">Повторять каждый:</h5>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">пн
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">вт
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">ср
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">чт
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">пт
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">сб
-                                            </label>
-                                            <label class="form-check-inline label-normal">
-                                                <input type="checkbox" class="form-check-input" value="">вс
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <i class="glyphicon glyphicon-minus"></i>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="input-group timepicker">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                                              <input type="text" name="beginTime" class="set-due-date form-control" placeholder="начало">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="input-group timepicker">
-                                              <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                                              <input type="text" name="endTime" class="set-due-date form-control" placeholder="конец">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <div class="input-group timepicker">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-                                                <input type="text" name="duration" class="set-due-date form-control" placeholder="продолжительность">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="add-item">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                </button>
-                            </div>
-                            <div class="tab-pane" id="tab4">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5 class="page-header">Цвет текста</h5>
-                                        <div class="form-group">
-                                            <div class="input-group colorpicker-component text-color">
-                                                <input type="text" name="textColor" class="form-control" value="#F2F2F2">
-                                                <span class="input-group-addon"><i></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5 class="page-header">Цвет фона</h5>
-                                        <div class="form-group">
-                                            <div class="input-group colorpicker-component background-color">
-                                                <input type="text" name="backgroundColor" class="form-control" value="#F2F2F2">
-                                                <span class="input-group-addon"><i></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab5">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="number" name="coastAdult" class="form-control" placeholder="Стоимость для взрослых">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="number" name="coastChildren" class="form-control" placeholder="Стоимость для детей">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab6">
-                                <div class="form-group">
-                                    {{> universeSelectize name="address" optionsMethod="getOptionsRelated" placeholder="Выберите населенный пункт" optionsPlaceholder="Выберите населенный пункт"}}
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tab7">
-                                <div class="form-group">
-                                    <input type="text" name="telnumber" class="form-control" placeholder="Контактный телефон">
-                                </div>
-                            </div>
-                            <ul class="pager wizard">
-                                <li class="previous"><a href="#">Предыдущая</a></li>
-                                <li class="next"><a href="#">Следующая</a></li>
-                                <li class="finish"><a href="#">Сохранить</a></li>
-                            </ul>
-                        </div>
+                    </section>
                     </div>
                 </div>
                 <!-- <div class="modal-footer">
                     <button id="addEvent" type="button" class="btn btn-primary pull-left">Сохранить</button>
                 </div> -->
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="time">
+    <div class="row">
+        <div class="col-md-1">
+            <button type="button" class="btn btn-primary remove-item">
+                <i class="glyphicon glyphicon-minus"></i>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="input-group timepicker">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                  <input type="text" name="beginTime" class="set-due-date form-control" placeholder="начало">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="input-group timepicker">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                  <input type="text" name="endTime" class="set-due-date form-control" placeholder="конец">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <div class="input-group timepicker">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                    <input type="text" name="duration" class="set-due-date form-control" placeholder="{{id}}">
+                </div>
             </div>
         </div>
     </div>
