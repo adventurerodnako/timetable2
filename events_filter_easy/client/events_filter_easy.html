@@ -1,0 +1,112 @@
+<template name="events_filter_easy">
+	<div class="row">
+	   
+		<h4>events_filter_easy</h4>
+	   
+		<div><a href="http://www.vissit.com/projects/eventCalendar/">www.vissit.com/projects/eventCalendar/</a></div>
+		<div><a href="http://www.jqueryscript.net/tags.php?/Calendar/">Другие варианты календарей</a>
+
+		</div>
+
+		
+
+		<br>
+		<p>Пока не получилось подключить moment.js, jquery.eventCalendar.js  не понимаю, какой пакет необходимо установить</p>
+
+
+
+		
+		
+
+
+		<div id="eventCalendar" style="width: 400px; margin: 50px auto;"></div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/jquery.eventCalendar.js"></script>
+	<script>
+		$(function() {
+			var data = [{
+				"date": "2016-09-13 22:00:00",
+				"type": "meeting",
+				"title": "Событие 1",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi obcaecati culpa distinctio!",
+				"url": "file:///O:/!HTML_test/eventAdd.html"
+			}, {
+				"date": "2016-09-18 11:00:00",
+				"type": "meeting",
+				"title": "Событие 2",
+				
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi obcaecati culpa distinctio!",
+				"url": "http://www.event3.com/"
+			}, {
+				"date": "2016-09-22 22:00:00",
+				"type": "meeting",
+				"title": "Событие 3",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, adipisci veritatis ullam nihil laudantium. Dignissimos molestiae veniam eligendi, doloremque accusamus, nesciunt consequatur esse ex eveniet. Fugiat necessitatibus et sed qui minima optio quo modi ex eaque consectetur facere nisi, hic reiciendis aspernatur repellat laboriosam rem.",
+				"url": "http://www.event3.com/"
+			}, {
+				"date": "2016-09-25 15:00:00",
+				"type": "meeting",
+				"title": "Событие 4",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, adipisci veritatis ullam nihil laudantium. Dignissimos molestiae veniam eligendi, doloremque accusamus, nesciunt consequatur esse ex eveniet. Fugiat necessitatibus et sed qui minima optio quo modi ex eaque consectetur facere nisi, hic reiciendis aspernatur repellat laboriosam rem.",
+				"url": "http://www.event3.com/"
+			}, {
+				"date": "2016-09-30 14:00:00",
+				"type": "meeting",
+				"title": "Событие 5",
+				"description": "Lorem Ipsum dolor set",
+				"url": "http://www.event3.com/"
+			}, {
+				"date": "2016-10-08 22:00:00",
+				"type": "meeting",
+				"title": "Событие 6",
+				"description": "Lorem Ipsum dolor set",
+				"url": "http://www.event3.com/"
+			}, {
+				"date": "2016-10-09 11:00:00",
+				"type": "meeting",
+				"title": "Событие 7",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, adipisci veritatis ullam nihil laudantium. Dignissimos molestiae veniam eligendi.",
+				"url": "http://www.event3.com/"
+			}]
+			$('#eventCalendar').eventCalendar({
+				jsonData: data,
+				jsonDateFormat: 'human',
+				startWeekOnMonday: true,
+				openEventInNewWindow: true,
+				eventsScrollable: false,
+				dateFormat: "dddd DD-MM-YYYY",
+				showDescription: true,
+				locales: {
+					locale: "ru",
+					txt_noEvents: "Нет запланированных событий",
+					txt_next: "next",
+					txt_prev: "prev",
+					txt_SpecificEvents_prev: "",
+					txt_SpecificEvents_after: "события:",
+					txt_NextEvents: "Следущие события:",
+					txt_GoToEventUrl: "Смотреть",
+					moment: {
+						"months": ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+							"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+						],
+						"monthsShort": ["Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+							"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"
+						],
+						"weekdays": ["Воскресенье", "Понедельник", "Вторник", "Среда",
+							"Четверг", "Пятница", "Суббота"
+						],
+						"weekdaysShort": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"
+						],
+						"weekdaysMin": ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+
+
+					}
+				}
+			})
+		});
+	</script>
+
+	</div>
+</template>
